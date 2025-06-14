@@ -4,6 +4,7 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');     // Change this to your MySQL username
 define('DB_PASSWORD', 'golf');         // updated password
 define('DB_NAME', 'golf_app');
+define('OPENWEATHER_API_KEY', '69fbc3f9fab7249bfd638a9ba825a074');
 
 // Attempt to connect to MySQL database
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
