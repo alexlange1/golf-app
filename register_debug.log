@@ -1,0 +1,42 @@
+Start of script
+After config include
+Variables initialized
+POST request received
+Validation errors:  |  | Password must have at least 6 characters. | 
+End of POST processing
+End of script
+Start of script
+After config include
+Variables initialized
+POST request received
+No validation errors, preparing insert
+Attempting to execute insert: alex, aleromlan@gmail.com
+Insert successful
+Session set, redirecting
+Start of script
+After config include
+Variables initialized
+POST request received
+No validation errors, preparing insert
+Attempting to execute insert: steve, steve@gmail.com
+Insert successful
+Session set, redirecting
+Start of script
+After config include
+Variables initialized
+POST request received
+No validation errors, preparing insert
+Attempting to execute insert: nils, nils@gmail.com
+Insert successful
+Session set, redirecting
+Start of script
+After config include
+Variables initialized
+POST request received
+Validation errors: This username is already taken. | This email is already registered. |  | 
+End of POST processing
+End of script
+Start of script
+After config include
+Variables initialized
+End of script

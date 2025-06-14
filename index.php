@@ -1,3 +1,9 @@
+<?php
+session_start();
+$is_logged_in = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+$username = $is_logged_in ? $_SESSION['username'] : '';
+$email = $is_logged_in ? $_SESSION['email'] : '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +30,27 @@
         </div>
       </div>
       <div class="nav-right">
-        <a class="active" href="index.html">Home</a>
+        <a class="active" href="index.php">Home</a>
         <a href="weather.html">Weather</a>
         <a href="tournaments.html">Tournaments</a>
         <a href="matches.html">Matches</a>
         <a href="leaderboard.html">Leaderboard</a>
         <a href="#">Bets</a>
         <a href="news.html">News</a>
-        <a href="profile.html">Profile</a>
+        <?php if ($is_logged_in): ?>
+          <div class="user-profile">
+            <div class="profile-icon"><?php echo strtoupper($username[0]); ?></div>
+            <div class="profile-dropdown">
+              <a href="profile.html">Profile</a>
+              <a href="settings.html">Settings</a>
+              <div class="divider"></div>
+              <a href="logout.php">Logout</a>
+            </div>
+          </div>
+        <?php else: ?>
+          <a href="login.php" class="btn-outline">Login</a>
+          <a href="signup.php" class="btn-primary">Sign Up</a>
+        <?php endif; ?>
       </div>
     </div>
   </nav>
@@ -135,5 +154,21 @@
       </div>
     </section>
   </main>
+  <script src="auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const profileIcon = document.querySelector('.profile-icon');
+      const dropdown = document.querySelector('.profile-dropdown');
+      if (profileIcon && dropdown) {
+        profileIcon.addEventListener('click', function(e) {
+          e.stopPropagation();
+          dropdown.classList.toggle('active');
+        });
+        document.addEventListener('click', function() {
+          dropdown.classList.remove('active');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
