@@ -161,14 +161,19 @@
         </div>
       </div>
       <div class="nav-right">
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="weather.html">Weather</a>
-        <a href="tournaments.html">Tournaments</a>
-        <a href="matches.html">Matches</a>
+        <a href="courses.html">Courses</a>
         <a href="leaderboard.html">Leaderboard</a>
-        <a href="#">Bets</a>
-        <a href="news.html">News</a>
-        <a class="active" href="profile.html">Profile</a>
+        <div class="user-profile">
+          <div class="profile-icon">P</div>
+          <div class="profile-dropdown">
+            <a href="profile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <div class="divider"></div>
+            <a href="logout.php">Logout</a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -317,8 +322,6 @@
             <div style="color:#16a34a; font-size:0.98rem; margin-bottom:16px;">Choose how you want to be notified</div>
             <div class="checkbox-group">
               <label class="checkbox-label"><input type="checkbox" checked /> Email Notifications <span style="color:#64748b; font-size:0.95rem;">Match invites and results</span></label>
-              <label class="checkbox-label"><input type="checkbox" checked /> Tournament Updates <span style="color:#64748b; font-size:0.95rem;">New tournaments and results</span></label>
-              <label class="checkbox-label"><input type="checkbox" /> Friend Activity <span style="color:#64748b; font-size:0.95rem;">When friends complete rounds</span></label>
               <label class="checkbox-label"><input type="checkbox" checked /> Weekly Reports <span style="color:#64748b; font-size:0.95rem;">Your weekly golf summary</span></label>
             </div>
           </div>

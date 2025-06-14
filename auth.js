@@ -5,3 +5,5 @@ function logout() {
 }
 
 // No need to check auth state on DOMContentLoaded anymore 
+
+// No need to update navigation for News and Bets tabs, as navigation is now handled by PHP. 

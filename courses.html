@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses - Fairway Friends</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .courses-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 40px;
+    }
+    @media (max-width: 900px) {
+      .courses-list { grid-template-columns: 1fr; }
+    }
+    .course-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(22, 163, 74, 0.08);
+      border: 1.5px solid #e0e7ef;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.18s, transform 0.18s;
+    }
+    .course-card:hover {
+      box-shadow: 0 8px 32px rgba(22, 163, 74, 0.13);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .course-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #e0e7ef;
+    }
+    .course-info {
+      padding: 22px 20px 18px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .course-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 8px;
+    }
+    .course-location {
+      color: #16a34a;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+    .join-btn {
+      align-self: flex-end;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="logo-circle">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Fairway Friends</h1>
+          <p class="subtitle">Score. Compete. Connect on the green.</p>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="index.php">Home</a>
+        <a href="weather.html">Weather</a>
+        <a class="active" href="matches.html">Courses</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <h2 style="text-align:center; color:#166534; font-size:2.2rem; font-weight:700; margin-top:32px;">Available Courses</h2>
+    <div class="courses-list">
+      <div class="course-card">
+        <img class="course-img" src="golf-pictures/pebble-beach.jpg" alt="Pebble Beach Golf Links" />
+        <div class="course-info">
+          <div>
+            <div class="course-title">Pebble Beach Golf Links</div>
+            <div class="course-location">California, USA</div>
+          </div>
+          <button class="btn-primary join-btn">Play Course</button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img class="course-img" src="golf-pictures/st-andrews.jpg" alt="St Andrews Old Course" />
+        <div class="course-info">
+          <div>
+            <div class="course-title">St Andrews Old Course</div>
+            <div class="course-location">St Andrews, Scotland</div>
+          </div>
+          <button class="btn-primary join-btn">Play Course</button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img class="course-img" src="golf-pictures/augusta.jpg" alt="Augusta National" />
+        <div class="course-info">
+          <div>
+            <div class="course-title">Augusta National</div>
+            <div class="course-location">Georgia, USA</div>
+          </div>
+          <button class="btn-primary join-btn">Play Course</button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img class="course-img" src="golf-pictures/royal-melbourne.jpg" alt="Royal Melbourne" />
+        <div class="course-info">
+          <div>
+            <div class="course-title">Royal Melbourne</div>
+            <div class="course-location">Melbourne, Australia</div>
+          </div>
+          <button class="btn-primary join-btn">Play Course</button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img class="course-img" src="golf-pictures/pine-valley.jpg" alt="Pine Valley" />
+        <div class="course-info">
+          <div>
+            <div class="course-title">Pine Valley</div>
+            <div class="course-location">New Jersey, USA</div>
+          </div>
+          <button class="btn-primary join-btn">Play Course</button>
+        </div>
+      </div>
+      <div class="course-card">
+        <img class="course-img" src="golf-pictures/oakmont.jpg" alt="Oakmont Country Club" />
+        <div class="course-info">
+          <div>
+            <div class="course-title">Oakmont Country Club</div>
+            <div class="course-location">Pennsylvania, USA</div>
+          </div>
+          <button class="btn-primary join-btn">Play Course</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html> 

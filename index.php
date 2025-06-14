@@ -32,11 +32,8 @@ $email = $is_logged_in ? $_SESSION['email'] : '';
       <div class="nav-right">
         <a class="active" href="index.php">Home</a>
         <a href="weather.html">Weather</a>
-        <a href="tournaments.html">Tournaments</a>
-        <a href="matches.html">Matches</a>
+        <a href="courses.html">Courses</a>
         <a href="leaderboard.html">Leaderboard</a>
-        <a href="#">Bets</a>
-        <a href="news.html">News</a>
         <?php if ($is_logged_in): ?>
           <div class="user-profile">
             <div class="profile-icon"><?php echo strtoupper($username[0]); ?></div>
@@ -110,27 +107,6 @@ $email = $is_logged_in ? $_SESSION['email'] : '';
       </div>
     </section>
     <section class="bottom-grid">
-      <div class="tournaments-card">
-        <h3><svg width="20" height="20" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg> Ongoing Tournaments</h3>
-        <p class="card-subtitle">Join these active competitions</p>
-        <div class="tournament-list">
-          <div class="tournament">
-            <div>
-              <div class="tournament-title">Spring Championship</div>
-              <div class="tournament-desc">Ends in 5 days • $50 entry</div>
-            </div>
-            <button class="btn-outline">Join</button>
-          </div>
-          <div class="tournament">
-            <div>
-              <div class="tournament-title">Weekend Warriors</div>
-              <div class="tournament-desc">Ends tomorrow • Free entry</div>
-            </div>
-            <button class="btn-outline">Join</button>
-          </div>
-        </div>
-        <a href="#" class="view-link">View All Tournaments</a>
-      </div>
       <div class="activity-card">
         <h3><svg width="20" height="20" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Friends Activity</h3>
         <p class="card-subtitle">See what your friends are up to</p>
